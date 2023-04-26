@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+:root{
+--Verypaleblue: hsl(225, 100%, 98%);
+--Desaturatedblue: hsl(224, 23%, 55%);
+--Darkblue: hsl(223, 47%, 23%);
+--Paleblue: hsl(225, 100%, 94%);
+--Brightblue: hsl(245, 75%, 52%);
+}
+
+
+html{
+    font-family: 'Red Hat Display', sans-serif;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    background-color: hsl(225, 100%, 94%);
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width: 350px;
+    height: 540px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px 1px hsla(0, 0%, 0%, 0.11);
+   
+}
+
+.card .image{
+    border-radius: 20px 20px 0 0;
+    background: url(images/illustration-hero.svg);
+    background-size: cover;
+    min-height: 170px;
+}
+
+.card .info{
+    
+    height: 100%;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+   
+    
+}
+
+.card .info h2{
+    
+    font-weight: 900;
+    font-size:1.3rem;
+    color:hsla(0, 0%, 0%, 0.76);
+    margin: 0;
+   
+    
+}
+
+.card .info p{
+    font-size: 0.8rem;
+    font-weight: 700;
+   color:rgba(0, 0, 0, 0.466);
+    line-height: 1.6;
+}
+
+.card .info .pris{
+    background-color: var(--Verypaleblue); 
+    border-radius: 10px; 
+    padding: 1.3rem;
+    width: 80%;
+    text-align: left;
+}
+
+.card .info .pris > img{
+    float: left;
+    width: 40px;
+    margin-right: 1rem;
+ 
+}
+
+.card .info .pris h3{
+    font-size: 0.8rem;
+    font-weight: 900;
+    color:hsla(0, 0%, 0%, 0.76);
+    margin: 0;
+
+}
+
+.card .info .pris > span{
+    font-size: 0.8rem;
+    font-weight: 700;
+    color:rgba(0, 0, 0, 0.466);
+ 
+}
+
+.card .info .pris > a{
+    float: right;
+    font-size: 0.7rem;
+    font-weight: 900;
+    cursor: pointer;
+ 
+}
+
+button{
+    
+    width: 95%;
+    border: 0;
+    cursor: pointer;
+    margin-top: .8rem;
+   
+}
+
+.card .info .button-proceed{
+    background-color: var(--Brightblue) ;
+    color: var(--Paleblue);
+    font-family: 'Red Hat Display', sans-serif;
+    font-size: .7rem;
+    font-weight: 700;
+    padding: 0.8rem;
+    border-radius: 10px;
+    box-shadow:5px 15px 15px 5px hsla(0, 0%, 0%, 0.096);
+    z-index: 1;
+    margin-top: 1.5rem;
+}
+
+.card .info .button-Cancel{
+    background-color: white;
+    color:rgba(0, 0, 0, 0.534);
+    font-family: 'Red Hat Display', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 900;
+    padding: 0.8rem;
+   
+}
+
+
+@media screen and (max-width: 375px) {
+   
+    html{
+        font-size: 19px;
+    }
+
+    .card{
+        height: 600px;
+        width: 320px;
+    }
+
+    .card .info{
+        padding: 1.3rem;
+    }
+
+    .card .info .button-proceed{
+         margin-top: 1rem;
+    }
+
+    .card .info .button-Cancel{
+        margin-top: 0rem;
+   }
+}
